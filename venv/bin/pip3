@@ -1,4 +1,4 @@
-#!/home/yuriy/PycharmProjects/coursework2_source/venv/bin/python3
+#!/home/yuriy/PycharmProjects/coursework2_source/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
