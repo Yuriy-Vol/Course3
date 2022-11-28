@@ -33,10 +33,16 @@
               <span class="item__username">{{ post.poster_name }}</span>
             </a>
           </div>
-          <a href="/post/{{ post.pk }}" class="item__post-link">
-            <img src="{{ post.pik }}" alt="" width="348" class="item__post-img">
+          <a href="/posts/{{ post.pk }}" class="item__post-link">
+            <img src="{{ post.pic }}" alt="" width="348" class="item__post-img">
           </a>
-          <p class="item__descr"><a href="#" class="item__tag">#food</a> {{ post.content }}</p>
+
+          {% if post.content|length > 100 %}
+            <p class="item__descr"><a href="#" class="item__tag">#food</a> {{ post.content[:100] }}...</p>
+          {% else %}
+            <p class="item__descr"><a href="#" class="item__tag">#food</a> {{ post.content }}</p>
+          {% endif %}
+
           <div class="item__post-info">
             <div class="item__counter">
               <img src="/static/img/eye.png" alt="" class="item__counter-icon" width="26">
